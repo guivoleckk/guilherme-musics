@@ -1,18 +1,8 @@
-# Trybe Tunes :headphones:
 
-A aplicação Trybe Tunes nasceu a partir do projeto de mesmo nome, realizado durante o curso de [Desenvolvimento Web da Trybe](https://www.betrybe.com/?utm_source=google&utm_medium=cpc&utm_campaign=pmax&utm_content=ad1&gclid=CjwKCAjwloCSBhAeEiwA3hVo_Vcaifzp212qnJNIWqPtVYgO0Kv-WeKo-aR2BQdFRsjAR5p2Xtyl0hoCl6oQAvD_BwE).
+Guilherme Musics is a music application that utilizes a free API to provide users with access to a wide range of songs and albums. The app allows users to search for artists, browse their albums, and favorite or unfavorite songs. It also provides the ability to play song previews, as the free API offers short 30-second clips of each track.
 
-## Projeto :rocket:
+The application is built using a combination of modern web technologies, including React for building the user interface, JavaScript for implementing the functionality, and HTML and CSS for structuring and styling the app's components.
 
-A proposta do projeto era construir uma aplicação que consultava dados de músicas e álbuns através da consulta à [API pública do Itunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/). 
+By leveraging the power of the free API, Guilherme Musics enables users to explore music, discover new artists, and manage their preferences within the app. Whether you're looking for a specific song or interested in exploring different genres, Guilherme Musics provides a convenient and enjoyable way to discover and enjoy music.
 
-Permitindo ao usuário buscar pelo nome do artista, acessar os albuns deste, favoritar e desfavoritar suas músicas, além claro de reproduzí-las (esta API pública do Itunes apresenta **recortes das canções de 30 seg cada**). Para concluir, a aplicação também permite a edição do perfil do usuário.
-
-## Tecnologias :rocket:
-
-Durante o desenvolvimento da aplicação, foram utilizados:
-
-* React
-* Javascript 
-* HTML
-* CSS
+Need node version 16 or 18 > npm install and enjoy!
