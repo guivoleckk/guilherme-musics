@@ -1,108 +1,113 @@
-import React, { Component } from 'react';
+/* eslint-disable react/jsx-max-depth */
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Carregando from './Carregando';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../css/carregando.css';
+import '../css/search.css';
 
-class Search extends Component {
-  constructor(props) {
-    super(props);
+class Search extends React.Component {
+  constructor() {
+    super();
     this.state = {
-      inputControl: '',
-      carregando: false,
-      albumTaked: [],
-      artistSearched: '',
+      valueInput: '',
+      nameArtista: '',
+      album: [],
+      isLoading: false,
     };
-    this.controlInput = this.controlInput.bind(this);
-    this.rescueAlbum = this.rescueAlbum.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
+    this.fetchAPI = this.fetchAPI.bind(this);
   }
 
-  controlInput({ target }) {
+  handleChange({ target }) {
     const { value } = target;
-    this.setState({ inputControl: value });
+    this.setState({ valueInput: value });
   }
 
-  async rescueAlbum(event) {
-    event.preventDefault();
-    const { inputControl } = this.state;
-    this.setState({ carregando: true });
-    const requestAPI = await searchAlbumsAPI(inputControl);
+  async fetchAPI(e) {
+    e.preventDefault();
+    const { valueInput } = this.state;
+    this.setState({ isLoading: true });
+    const resultAPI = await searchAlbumsAPI(valueInput);
     this.setState({
-      inputControl: '',
-      carregando: false,
-      albumTaked: requestAPI,
-      artistSearched: inputControl,
+      valueInput: '',
+      nameArtista: valueInput,
+      isLoading: false,
+      album: resultAPI,
     });
   }
 
   render() {
-    const { inputControl, carregando, albumTaked, artistSearched } = this.state;
-    console.log(albumTaked);
-    const magicNumber = 2;
+    const maxValue = 2;
+    const { valueInput, isLoading, nameArtista, album } = this.state;
     return (
-      <>
-        <Header />
-        <div data-testid="page-search" className="page-search">
-          {carregando ? <Carregando /> : <p className="search-render"> Search Music </p>}
-        </div>
-        <form onSubmit={ this.rescueAlbum } className="form-search">
-          <div className="section-search">
-            <label htmlFor="search-artist-input">
-              Search Music:
-              { ' ' }
-              <input
-                type="text"
-                id="search-artist-input"
-                data-testid="search-artist-input"
-                onChange={ this.controlInput }
-                value={ inputControl }
-              />
-            </label>
-            <label htmlFor="buttonForm">
-              <button
-                id="buttonForm"
-                type="submit"
-                data-testid="search-artist-button"
-                disabled={ inputControl.length < magicNumber }
-              >
-                Buscar
-              </button>
-            </label>
-          </div>
-        </form>
-        <div className="result-text">
-          {artistSearched && (
-            <p>
-              Resultado de álbuns de:
-              { '            ' }
-              { artistSearched }
-            </p>
-          )}
-        </div>
-        <div className="albuns-render">
-          { albumTaked.length > 0 ? (
-            <div className="album-list">
-              {albumTaked.map((album) => (
-                <div key={ album.collectionId }>
+      <div data-testid="page-search">
+        { isLoading ? <Carregando /> : (
+          <>
+            <Header />
+            <form id="search-form">
+              <label htmlFor="input-search">
+                <div className="container-search">
+                  <input
+                    className="input-search"
+                    data-testid="search-artist-input"
+                    placeholder="Pesquisar álbum"
+                    type="text"
+                    value={ valueInput }
+                    autoComplete="off"
+                    onChange={ this.handleChange }
+                  />
+                  <div className="div-button">
+                    <button
+                      className="button-search"
+                      data-testid="search-artist-button"
+                      type="submit"
+                      form="search-form"
+                      disabled={ valueInput.length < maxValue }
+                      onClick={ this.fetchAPI }
+                    >
+                      Pesquisar
+                    </button>
+                  </div>
+                </div>
+              </label>
+            </form>
+          </>
+        )}
+        <div>
+          {album.length > 0 ? (
+            <div className="div-album">
+              {album.map((artist, index) => (
+                <div key={ index } className="album-card">
+                  <Link to={ `/album/${artist.collectionId}` }>
+                    <img
+                      className="imagem-album"
+                      key={ artist.collectionId }
+                      src={ artist.artworkUrl100 }
+                      alt={ nameArtista }
+                    />
+                  </Link>
                   <Link
                     className="link-album"
-                    to={ `/album/${album.collectionId}` }
-                    key={ album.collectionId }
-                    data-testid={ `link-to-album-${album.collectionId}` }
+                    key={ artist.collectionId }
+                    data-testid={ `link-to-album-${artist.collectionId}` }
+                    to={ `/album/${artist.collectionId}` }
                   >
-                    <img src={ album.artworkUrl100 } alt={ album.collectionId } />
-                    {album.collectionName}
+                    <p className="name-album">
+                      {artist.collectionName}
+                    </p>
                   </Link>
                 </div>
               ))}
             </div>
           ) : (
-            <div>
-              <p className="error-msg">Nenhum álbum foi encontrado</p>
-            </div>
+            <p className="no-album">Nenhum álbum foi encontrado!</p>
           )}
         </div>
-      </>
+
+      </div>
     );
   }
 }

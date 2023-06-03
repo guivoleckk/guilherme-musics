@@ -1,0 +1,386 @@
+
+
+
+/* Estilos para celulares com largura de tela menor que 576px */
+@media (max-width: 575.98px) {
+  /* Estilos para dispositivos móveis */
+  * {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .h1-login {
+    padding: 30px;
+    color: #0afff7;
+    font-size: 22px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form1 {
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Alterado para coluna */
+    align-items: center; /* Adicionado alinhamento vertical */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 26px rgba(242, 3, 67, 0.2);
+    height: 250px;
+    width: 375px;
+    padding: 20px; /* Adicionado espaçamento interno */
+    box-sizing: border-box; /* Adicionado */
+  }
+  
+  .input-text {
+    background-color: white;
+    border: 1px solid #0afff7;
+    color: #0afff7;
+    font-size: 10px;
+    border-radius: 100px;
+    height: 40%;
+    width: 100%; /* Alterado para preencher a largura disponível */
+    max-width: 400px; /* Adicionado limite de largura */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */ /* Adicionado espaçamento interno */
+  }
+  
+  .button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: white;
+    font-size: 15px;
+    height: 18px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    border-radius: 100px;
+  }
+  
+  .input-text::placeholder {
+    color: #0afff7;
+  }
+  
+  .input-text:focus {
+    outline-color: #0afff7;
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 576px e menor que 768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para dispositivos móveis e tablets em modo retrato */
+  * {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .h1-login {
+    padding: 30px;
+    color: #0afff7;
+    font-size: 22px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form1 {
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Alterado para coluna */
+    align-items: center; /* Adicionado alinhamento vertical */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 26px rgba(242, 3, 67, 0.2);
+    height: 260px;
+    width: 440px;
+    padding: 20px; /* Adicionado espaçamento interno */
+    box-sizing: border-box; /* Adicionado */
+  }
+  
+  .input-text {
+    background-color: white;
+    border: 1px solid #0afff7;
+    color: #0afff7;
+    font-size: 10px;
+    height: 40%;
+    border-radius: 100px;
+    width: 100%; /* Alterado para preencher a largura disponível */
+    max-width: 400px; /* Adicionado limite de largura */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */ /* Adicionado espaçamento interno */
+  }
+  
+  .button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: white;
+    font-size: 15px;
+    height: 18px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    border-radius: 100px;
+  }
+  
+  .input-text::placeholder {
+    color: #0afff7;
+  }
+  
+  .input-text:focus {
+    outline-color: #0afff7;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 768px e menor que 992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para tablets em modo paisagem e dispositivos móveis com tela maior */
+  * {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .h1-login {
+    padding: 30px;
+    color: #0afff7;
+    font-size: 22px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form1 {
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Alterado para coluna */
+    align-items: center; /* Adicionado alinhamento vertical */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 26px rgba(242, 3, 67, 0.2);
+    height: 270px;
+    width: 540px;
+    padding: 20px; /* Adicionado espaçamento interno */
+    box-sizing: border-box; /* Adicionado */
+  }
+  
+  .input-text {
+    background-color: white;
+    border: 1px solid #0afff7;
+    color: #0afff7;
+    font-size: 10px;
+    border-radius: 100px;
+    height: 40%;
+    width: 100%; /* Alterado para preencher a largura disponível */
+    max-width: 400px; /* Adicionado limite de largura */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */ /* Adicionado espaçamento interno */
+  }
+  
+  .button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: white;
+    font-size: 15px;
+    height: 18px;
+    width: auto;
+    margin-left: auto;
+    border-radius: 100px;
+    margin-right: auto;
+    padding: 12px;
+  }
+  
+  .input-text::placeholder {
+    color: #0afff7;
+  }
+  
+  .input-text:focus {
+    outline-color: #0afff7;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 992px e menor que 1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para dispositivos maiores, como laptops */
+  * {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .h1-login {
+    padding: 45px;
+    color: #0afff7;
+    font-size: 38px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form1 {
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Alterado para coluna */
+    align-items: center; /* Adicionado alinhamento vertical */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 26px rgba(242, 3, 67, 0.2);
+    height: 350px;
+    width: 720px;
+    padding: 20px; /* Adicionado espaçamento interno */
+    box-sizing: border-box; /* Adicionado */
+  }
+  
+  .input-text {
+    background-color: white;
+    border: 1px solid #0afff7;
+    color: #0afff7;
+    font-size: 20px;
+    height: 40%;
+    width: 100%; /* Alterado para preencher a largura disponível */
+    max-width: 400px; /* Adicionado limite de largura */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */ /* Adicionado espaçamento interno */
+    border-radius: 100px;
+    padding: 4px;
+    border-radius: 100px;
+  }
+  
+  .button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: white;
+    font-size: 23px;
+    height: 40px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    border-radius: 100px;
+  }
+  
+  .input-text::placeholder {
+    color: #0afff7;
+  }
+  
+  .input-text:focus {
+    outline-color: #0afff7;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 1200px */
+@media (min-width: 1200px) {
+  /* Estilos para dispositivos maiores, como desktops */
+  * {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .h1-login {
+    color: #00e5ff;
+    padding: 45px;
+    font-size: 38px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form1 {
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Alterado para coluna */
+    align-items: center; /* Adicionado alinhamento vertical */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 26px rgba(242, 3, 67, 0.2);
+    height: 390px;
+    width: 790px;
+    padding: 20px; /* Adicionado espaçamento interno */
+    box-sizing: border-box; /* Adicionado */
+  }
+  
+  .input-text {
+    background-color: white;
+    border: 1px solid #0afff7;
+    color: #0afff7;
+    font-size: 20px;
+    height: 40%;
+    width: 100%; /* Alterado para preencher a largura disponível */
+    max-width: 400px; /* Adicionado limite de largura */
+    margin-bottom: 20px; /* Adicionado espaçamento inferior */ /* Adicionado espaçamento interno */
+    border-radius: 100px;
+    padding: 4px;
+  }
+  
+  .button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: white;
+    font-size: 23px;
+    height: 40px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 100px;
+  }
+  
+  .input-text::placeholder {
+    color: #0afff7;
+  }
+  
+  .input-text:focus {
+    outline-color: #00e5ff;
+  }
+}

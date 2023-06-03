@@ -1,0 +1,508 @@
+
+/* Estilos para celulares com largura de tela menor que 576px */
+@media (max-width: 575.98px) {
+  /* Estilos para dispositivos móveis */
+  #search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-search {
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .input-search {
+    margin: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 23px;
+    color: rgb(13, 225, 201);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 400px;
+  }
+  
+  .div-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: 14px;
+    border: #00d5e2;
+  }
+  
+  .button-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00d5e2;
+    border-radius: 23px;
+    color: white;
+    font-weight: 700;
+    height: 40px;
+    width: 114px;
+    margin-bottom: 24px;
+  }
+  
+  .no-album {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .result {
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 300;
+    height: 24.89px;
+    left: 800px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 302px;
+    width: 337.2px;
+  }
+  
+  .div-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+  }
+  
+  .name-album {
+    margin-bottom: 20px;
+  }
+  
+  .imagem-album {
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .link-album {
+    color: #3d495c;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 576px e menor que 768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para dispositivos móveis e tablets em modo retrato */
+  #search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-search {
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .input-search {
+    margin: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 23px;
+    color: rgb(13, 225, 201);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 400px;
+  }
+  
+  .div-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: 14px;
+    border: #00d5e2;
+  }
+  
+  .button-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00d5e2;
+    border-radius: 23px;
+    color: white;
+    font-weight: 700;
+    height: 40px;
+    width: 114px;
+    margin-bottom: 24px;
+  }
+  
+  .no-album {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .result {
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 300;
+    height: 24.89px;
+    left: 800px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 302px;
+    width: 337.2px;
+  }
+  
+  .div-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+  }
+  
+  .name-album {
+    margin-bottom: 20px;
+  }
+  
+  .imagem-album {
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .link-album {
+    color: #3d495c;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 768px e menor que 992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para tablets em modo paisagem e dispositivos móveis com tela maior */
+  #search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-search {
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .input-search {
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 23px;
+    color: rgb(13, 225, 201);
+    height: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 400px;
+    font-size: 18px;
+  }
+  
+  .div-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: 20px;
+    border: #00d5e2;
+  }
+  
+  .button-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00d5e2;
+    border-radius: 23px;
+    color: white;
+    font-weight: 700;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+  
+  .no-album {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .result {
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 300;
+    height: 24.89px;
+    left: 800px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 302px;
+    width: 337.2px;
+  }
+  
+  .div-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+  }
+  
+  .name-album {
+    margin-bottom: 20px;
+  }
+  
+  .imagem-album {
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .link-album {
+    color: #3d495c;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 992px e menor que 1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para dispositivos maiores, como laptops */
+  #search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-search {
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .input-search {
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 23px;
+    color: rgb(13, 225, 201);
+    height: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 400px;
+    font-size: 20px;
+  }
+  
+  .div-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: 20px;
+    border: #00d5e2;
+  }
+  
+  .button-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00d5e2;
+    border-radius: 23px;
+    color: white;
+    font-weight: 700;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+  
+  .no-album {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .result {
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 300;
+    height: 24.89px;
+    left: 800px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 302px;
+    width: 337.2px;
+  }
+  
+  .div-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+  }
+  
+  .name-album {
+    margin-bottom: 20px;
+  }
+  
+  .imagem-album {
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .link-album {
+    color: #3d495c;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 1200px */
+@media (min-width: 1200px) {
+  /* Estilos para dispositivos maiores, como desktops */
+  #search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-search {
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  .input-search {
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 23px;
+    color: rgb(13, 225, 201);
+    height: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 400px;
+    font-size: 25px;
+  }
+  
+  .div-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: 25px;
+    border: #00d5e2;
+  }
+  
+  .button-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00d5e2;
+    border-radius: 23px;
+    color: white;
+    font-weight: 700;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+  
+  .no-album {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .result {
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 300;
+    height: 24.89px;
+    left: 800px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 302px;
+    width: 337.2px;
+  }
+  
+  .div-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+  }
+  
+  .name-album {
+    margin-bottom: 20px;
+  }
+  
+  .imagem-album {
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .link-album {
+    color: #3d495c;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

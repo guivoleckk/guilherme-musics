@@ -1,66 +1,80 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
+import '../css/login.css';
+import '../css/carregando.css';
 import Carregando from './Carregando';
 
-class Login extends Component {
+class Login extends React.Component {
   constructor() {
     super();
     this.state = {
       disabled: true,
-      nomeUser: '',
-      carregando: false,
+      name: '',
+      isLoading: false,
     };
-    this.loginFunction = this.loginFunction.bind(this);
-    this.minimumToSubmit = this.minimumToSubmit.bind(this);
+    this.activeButton = this.activeButton.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  loginFunction() {
+  handleClick() {
     this.setState({
-      carregando: true,
+      isLoading: true,
     }, async () => {
-      const { nomeUser } = this.state;
-      await createUser({ name: nomeUser });
+      const { name } = this.state;
+      await createUser({ name });
       const { history } = this.props;
       history.push('/search');
     });
   }
 
-  minimumToSubmit({ target }) {
-    const fantasyNumber = 3;
+  activeButton({ target }) {
+    const maxValue = 3;
     const { value } = target;
-    this.setState({
-      disabled: value.length < fantasyNumber,
-      nomeUser: value,
-    });
+    if (value.length >= maxValue) {
+      this.setState({
+        disabled: false,
+        name: value,
+      });
+    }
   }
 
   render() {
-    const { disabled, carregando } = this.state;
+    const { disabled, isLoading } = this.state;
     return (
-      <div data-testid="page-login" className="div-pai-login">
-        <h2 className="login">Login</h2>
-        {carregando ? <Carregando /> : (
-          <form className="form-login">
-            <label htmlFor="name-input">
-              <input
-                type="text"
-                data-testid="login-name-input"
-                onChange={ this.minimumToSubmit }
-                id="name-input"
-                placeholder=" Digite seu login"
-              />
-            </label>
-            <label>
-              <input
-                type="submit"
-                data-testid="login-submit-button"
-                onClick={ this.loginFunction }
-                disabled={ disabled }
-                id="button-login"
-              />
-            </label>
-          </form>
+      <div className="login-container" data-testid="page-login">
+        {isLoading ? <Carregando /> : (
+          <div className="form-container">
+
+            <form className="form1">
+              <h1
+                className="h1-login"
+              >
+                Guilherme Musics
+              </h1>
+              <label className="input-button" htmlFor="input-text">
+                <input
+                  type="text"
+                  className="input-text"
+                  data-testid="login-name-input"
+                  onChange={ this.activeButton }
+                  placeholder="Nome"
+                  autoComplete="off"
+                />
+                <button
+                  className="button-submit"
+                  type="submit"
+                  form="form1"
+                  value="Submit"
+                  data-testid="login-submit-button"
+                  disabled={ disabled }
+                  onClick={ this.handleClick }
+                >
+                  Entrar
+                </button>
+              </label>
+            </form>
+          </div>
         )}
       </div>
     );

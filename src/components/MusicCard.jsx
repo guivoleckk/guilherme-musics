@@ -1,86 +1,83 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Carregando from '../pages/Carregando';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import Carregando from '../pages/Carregando';
+import '../css/musiccard.css';
 
-class MusicCard extends Component {
-  constructor(props) {
-    super(props);
+class MusicCard extends React.Component {
+  constructor() {
+    super();
     this.state = {
-      carregando: false,
-      favoriteMusicCheckbox: false,
+      isLoading: false,
+      checkedFavorite: false,
     };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
   async componentDidMount() {
-    const favoriteMusicCheckbox = await this.favoriteCheckBox();
-    this.setState({ favoriteMusicCheckbox });
+    this.setState({
+      checkedFavorite: await this.favorite(),
+    });
   }
 
-  async handleChange(event) {
+  async handleChange({ target: { checked } }) {
     const { music } = this.props;
-    const { checked } = event.target;
-    this.setState({ carregando: true, favoriteMusicCheckbox: checked });
-    if (checked) {
-      await addSong(music);
-    } else {
-      await removeSong(music);
-    }
-    this.setState({ carregando: false });
+    this.setState({
+      isLoading: true,
+      checkedFavorite: checked,
+    });
+    if (checked) await addSong(music);
+    if (!checked) await removeSong(music);
+    this.setState({ isLoading: false });
   }
 
-  favoriteCheckBox = async () => {
-    const { music } = this.props;
-    // console.log(music);
-    const { trackId } = music;
-    const recoveryFavorites = await getFavoriteSongs();
-    return recoveryFavorites.map((item) => item.trackId).includes(trackId);
+  favorite = async () => {
+    const { music: { trackId } } = this.props;
+    const getFavorites = await getFavoriteSongs();
+    return getFavorites.map((music) => music.trackId).includes(trackId);
   };
 
   render() {
-    const { carregando, favoriteMusicCheckbox } = this.state;
-    const { music } = this.props;
+    const { music, updateList } = this.props;
+    const { isLoading, checkedFavorite } = this.state;
     const { previewUrl, trackName, trackId } = music;
+    console.log(trackName);
     return (
-      <div>
-        {carregando ? <Carregando /> : (
-          <div>
-            <div className="track-name">{trackName}</div>
-            <div className="father-audio">
-              <audio
-                className="tag-audio"
-                data-testid="audio-component"
-                src={ previewUrl }
-                controls
-              >
+      <div className="music-card">
+        {isLoading ? (<Carregando />) : (
+          <div className="music-container">
+            <ul>
+              <li>{trackName}</li>
+              <audio data-testid="audio-component" src={ previewUrl } controls>
                 <track kind="captions" />
-                Seu navegador não suporta o elemento
+                O seu navegador não suporta o elemento
                 <code>audio</code>
               </audio>
-            </div>
+              <label className="switch" htmlFor="check-music">
+                <input
+                  data-testid={ `checkbox-music-${trackId}` }
+                  type="checkbox"
+                  onChange={ this.handleChange }
+                  checked={ checkedFavorite }
+                  name="check-music"
+                  id="check-music"
+                  onClick={ updateList }
+                />
+                Favorita
+              </label>
+            </ul>
           </div>
         )}
-        <div className="father-favorite">
-          <label htmlFor="checkboxzin" className="label-favorita">
-            Favorita
-            <input
-              id="checkboxzin"
-              className="favorite-input"
-              data-testid={ `checkbox-music-${trackId}` }
-              type="checkbox"
-              onChange={ this.handleChange }
-              checked={ favoriteMusicCheckbox }
-            />
-          </label>
-        </div>
       </div>
     );
   }
 }
 
 MusicCard.propTypes = {
+  updateList: PropTypes.func.isRequired,
   musics: PropTypes.shape({
+    length: PropTypes.number,
   }),
 }.isRequired;
 
