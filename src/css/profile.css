@@ -1,0 +1,316 @@
+
+
+/* Estilos para celulares com largura de tela menor que 576px */
+@media (max-width: 575.98px) {
+  /* Estilos para dispositivos móveis */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-container {
+    width: 100%;
+  }
+  
+  .card-perfil {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .perfil-name,
+  .perfil-email,
+  .perfil-description {
+    margin-top: 10px;
+  }
+  
+  .button-edit {
+    margin-top: 20px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button-edit:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-edit:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 576px e menor que 768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para dispositivos móveis e tablets em modo retrato */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-container {
+    width: 100%;
+  }
+  
+  .card-perfil {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .perfil-name,
+  .perfil-email,
+  .perfil-description {
+    margin-top: 10px;
+  }
+  
+  .button-edit {
+    margin-top: 20px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button-edit:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-edit:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 768px e menor que 992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para tablets em modo paisagem e dispositivos móveis com tela maior */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-container {
+    width: 100%;
+  }
+  
+  .card-perfil {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .perfil-name,
+  .perfil-email,
+  .perfil-description {
+    margin-top: 10px;
+  }
+  
+  .button-edit {
+    margin-top: 20px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button-edit:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-edit:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 992px e menor que 1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para dispositivos maiores, como laptops */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-container {
+    width: 100%;
+  }
+  
+  .card-perfil {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .perfil-name,
+  .perfil-email,
+  .perfil-description {
+    margin-top: 10px;
+  }
+  
+  .button-edit {
+    margin-top: 20px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button-edit:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-edit:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 1200px */
+@media (min-width: 1200px) {
+  /* Estilos para dispositivos maiores, como desktops */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-container {
+    width: 100%;
+  }
+  
+  .card-perfil {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .perfil-name,
+  .perfil-email,
+  .perfil-description {
+    margin-top: 10px;
+  }
+  
+  .button-edit {
+    margin-top: 20px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button-edit:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-edit:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}

@@ -1,0 +1,456 @@
+
+
+/* Estilos para celulares com largura de tela menor que 576px */
+@media (max-width: 575.98px) {
+  /* Estilos para dispositivos móveis */
+  .perfil-container-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .edit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-name,
+  .input-email,
+  .foto-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 5px;
+  }
+  
+  .input-name:focus,
+  .input-email:focus,
+  .foto-input:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .textarea-description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  .textarea-description:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .foto-edit {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .button-save {
+    margin-top: 16px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 35%;
+  }
+  
+  .button-save:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-save:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 576px e menor que 768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para dispositivos móveis e tablets em modo retrato */
+  .perfil-container-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .edit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-name,
+  .input-email,
+  .foto-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 5px;
+  }
+  
+  .input-name:focus,
+  .input-email:focus,
+  .foto-input:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .textarea-description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  .textarea-description:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .foto-edit {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .button-save {
+    margin-top: 16px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 35%;
+  }
+  
+  .button-save:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-save:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 768px e menor que 992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para tablets em modo paisagem e dispositivos móveis com tela maior */
+  .perfil-container-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .edit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-name,
+  .input-email,
+  .foto-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 5px;
+  }
+  
+  .input-name:focus,
+  .input-email:focus,
+  .foto-input:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .textarea-description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  .textarea-description:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .foto-edit {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .button-save {
+    margin-top: 16px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 35%;
+  }
+  
+  .button-save:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-save:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 992px e menor que 1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para dispositivos maiores, como laptops */
+  .perfil-container-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .edit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-name,
+  .input-email,
+  .foto-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 5px;
+  }
+  
+  .input-name:focus,
+  .input-email:focus,
+  .foto-input:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .textarea-description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  .textarea-description:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .foto-edit {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .button-save {
+    margin-top: 16px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 35%;
+  }
+  
+  .button-save:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-save:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}
+
+/* Estilos para dispositivos com tela maior que 1200px */
+@media (min-width: 1200px) {
+  /* Estilos para dispositivos maiores, como desktops */
+  .perfil-container-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .edit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-name,
+  .input-email,
+  .foto-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 5px;
+  }
+  
+  .input-name:focus,
+  .input-email:focus,
+  .foto-input:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .textarea-description {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    resize: vertical;
+  }
+  
+  .textarea-description:focus {
+    outline: none;
+    border-color: #15afaa;
+  }
+  
+  .foto-edit {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .button-save {
+    margin-top: 16px;
+    background-color: #15afaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 35%;
+  }
+  
+  .button-save:hover {
+    background-color: #00fff7;
+  }
+  
+  .button-save:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(0, 255, 251);
+  }
+  
+}

@@ -1,60 +1,66 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Carregando from '../pages/Carregando';
 import { getUser } from '../services/userAPI';
+import '../css/header.css';
 
-class Header extends Component {
+class Header extends React.Component {
   state = {
-    nameTaked: '',
-    carregando: true,
+    name: '',
+    isLoading: true,
   };
 
   async componentDidMount() {
-    const nameUser = await getUser();
+    const user = await getUser();
     this.setState({
-      nameTaked: nameUser.name,
-      carregando: false,
+      name: user.name,
+      isLoading: false,
     });
   }
 
   render() {
-    const { nameTaked, carregando } = this.state;
+    const { name, isLoading } = this.state;
     return (
-      <header data-testid="header-component" className="header-text">
-        {carregando ? (
-          <Carregando />
-        ) : (
-          <>
-            <p data-testid="header-user-name" className="header-name">
-              {`Seja bem vindo: ${nameTaked}!`}
-            </p>
-            <div className="link-bar">
-              <Link
-                data-testid="link-to-search"
-                to="/search"
-                className="link-search"
-              >
-                Pesquisar
-              </Link>
-              <Link
-                data-testid="link-to-favorites"
-                to="/favorites"
-                className="link-favorite"
-              >
-                Favorites
-              </Link>
-              <Link
-                data-testid="link-to-profile"
-                to="/profile"
-                className="link-profile"
-              >
-                Profile
-              </Link>
+      <header className="container-header" data-testid="header-component">
+        {isLoading ? <Carregando />
+          : (
+            <div className="container-links">
+              <div className="container-name">
+                <img src="https://media.licdn.com/dms/image/C4D03AQEcG_LT9YGSOA/profile-displayphoto-shrink_800_800/0/1662469479962?e=1676505600&v=beta&t=WOGNBvUonRpRk58P5pEQuJ2qkWyNV3pydTx3mNq6vOU" alt="foto-perfil" className="foto-perfil" />
+                <h2 className="name" data-testid="header-user-name">{ name }</h2>
+              </div>
+
+              <div className="container-link">
+                <h1 className="title-search">Guilherme Musics</h1>
+                <Link
+                  className="link-search"
+                  data-testid="link-to-search"
+                  to="/search"
+                >
+                  Pesquisa
+
+                </Link>
+                <Link
+                  className="link-favorite"
+                  data-testid="link-to-favorites"
+                  to="/favorites"
+                >
+                  Favoritas
+                </Link>
+                <Link
+                  data-testid="link-to-profile"
+                  to="/profile"
+                  className="link-profile"
+                >
+                  Profile
+
+                </Link>
+              </div>
             </div>
-          </>
-        )}
+          )}
       </header>
     );
   }
 }
+
 export default Header;

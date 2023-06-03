@@ -1,0 +1,276 @@
+
+
+/* Estilos para celulares com largura de tela menor que 576px */
+@media (max-width: 575.98px) {
+  /* Estilos para dispositivos móveis */
+  .music-card {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .switch {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .switch input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .switch input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  .switch input[type="checkbox"] + span {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .switch input[type="checkbox"]:checked + span {
+    color: #00d5e2;
+    font-weight: 700;
+  }
+  
+  .switch input[type="checkbox"] + span:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 576px e menor que 768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para dispositivos móveis e tablets em modo retrato */
+  .music-card {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .switch {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .switch input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .switch input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  .switch input[type="checkbox"] + span {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .switch input[type="checkbox"]:checked + span {
+    color: #00d5e2;
+    font-weight: 700;
+  }
+  
+  .switch input[type="checkbox"] + span:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 768px e menor que 992px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para tablets em modo paisagem e dispositivos móveis com tela maior */
+  .music-card {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .switch {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .switch input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .switch input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  .switch input[type="checkbox"] + span {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .switch input[type="checkbox"]:checked + span {
+    color: #00d5e2;
+    font-weight: 700;
+  }
+  
+  .switch input[type="checkbox"] + span:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 992px e menor que 1200px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para dispositivos maiores, como laptops */
+  .music-card {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .switch {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .switch input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .switch input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  .switch input[type="checkbox"] + span {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .switch input[type="checkbox"]:checked + span {
+    color: #00d5e2;
+    font-weight: 700;
+  }
+  
+  .switch input[type="checkbox"] + span:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Estilos para dispositivos com tela maior que 1200px */
+@media (min-width: 1200px) {
+  /* Estilos para dispositivos maiores, como desktops */
+  .music-card {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  audio {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .switch {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .switch input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .switch input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  .switch input[type="checkbox"] + span {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .switch input[type="checkbox"]:checked + span {
+    color: #00d5e2;
+    font-weight: 700;
+  }
+  
+  .switch input[type="checkbox"] + span:hover {
+    text-decoration: underline;
+  }
+}

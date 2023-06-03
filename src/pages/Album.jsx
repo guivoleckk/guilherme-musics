@@ -1,49 +1,62 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
+import '../css/carregando.css';
 
-class Album extends Component {
+class Album extends React.Component {
   constructor() {
     super();
     this.state = {
-      nameOfArtist: '',
-      nameOfAlbum: '',
-      albumArray: [],
+      artistName: '',
+      albumName: '',
+      albumList: [],
     };
   }
 
   async componentDidMount() {
     const { match } = this.props;
     const { params: { id } } = match;
-    const fetchAlbum = await getMusics(id);
-    const { artistName, collectionName } = fetchAlbum[0];
+    const album = await getMusics(id);
     this.setState({
-      nameOfArtist: artistName,
-      nameOfAlbum: collectionName,
-      albumArray: fetchAlbum,
+      artistName: album[0].artistName,
+      albumName: album[0].collectionName,
+      albumList: album,
     });
   }
 
   render() {
-    const { nameOfArtist, nameOfAlbum, albumArray } = this.state;
+    const { artistName, albumName, albumList } = this.state;
     return (
-      <>
+      <div data-testid="page-album">
         <Header />
-        <div data-testid="page-album">
-          <p className="banda" data-testid="artist-name">{nameOfArtist}</p>
-          <p className="title-album" data-testid="album-name">{nameOfAlbum}</p>
-          <ul>
-            {albumArray.map((item) => item.kind && (
-              <MusicCard
-                key={ item.trackId }
-                music={ item }
-              />
-            ))}
-          </ul>
+        <h2
+          data-testid="artist-name"
+          style={ { display: 'flex',
+            justifyContent: 'center',
+            color: 'aqua',
+            margin: '8px' } }
+        >
+          {artistName}
+
+        </h2>
+        <h3
+          data-testid="album-name"
+          style={ { display: 'flex',
+            justifyContent: 'center',
+            color: 'aqua',
+            margin: '8px' } }
+        >
+          {albumName}
+        </h3>
+        <div className="card-music">
+          {albumList.map((music) => music.kind && <MusicCard
+            key={ music.trackId }
+            music={ music }
+          />)}
         </div>
-      </>
+      </div>
     );
   }
 }
