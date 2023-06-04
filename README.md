@@ -6,3 +6,5 @@ The application is built using a combination of modern web technologies, includi
 By leveraging the power of the free API, Guilherme Musics enables users to explore music, discover new artists, and manage their preferences within the app. Whether you're looking for a specific song or interested in exploring different genres, Guilherme Musics provides a convenient and enjoyable way to discover and enjoy music.
 
 Need node version 16 or 18 > npm install and enjoy!
+
+Deploy link: gui-musics.surge.sh
